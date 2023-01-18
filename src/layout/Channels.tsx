@@ -18,7 +18,7 @@ const Channels = () => {
   }, []);
 
   const getChannelList = async () => {
-    return await axios.get(`/api/channels?`).then(({ data }) => setChannelList(data));
+    return await axios.get(`${API_URL}/channels`).then(({ data }) => setChannelList(data));
   };
 
   const handleClickMoveChannel = (id: string) => {
