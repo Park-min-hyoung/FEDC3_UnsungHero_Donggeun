@@ -45,7 +45,7 @@ const Search = () => {
 
   const getEntirePostsList = async () => {
     setIsLoading(true);
-    axios.get(`/api/posts`).then((response) => {
+    axios.get(`/api/posts?`).then((response) => {
       const { data } = response;
       setPostsInfo(data);
       setIsLoading(false);
