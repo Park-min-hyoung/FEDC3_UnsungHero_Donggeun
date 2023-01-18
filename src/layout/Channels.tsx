@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 
-const API_URL = '//kdt.frontend.3rd.programmers.co.kr:5006';
+const API_URL = 'http://kdt.frontend.3rd.programmers.co.kr:5006';
 
 interface Channel {
   _id: string;
