@@ -8,7 +8,7 @@ import { useParams } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import Loading from '../api/Loading';
 
-const API_END_POINT = 'https://kdt.frontend.3rd.programmers.co.kr:5006';
+const API_END_POINT = 'http://kdt.frontend.3rd.programmers.co.kr:5006';
 
 const Search = () => {
   const [postsInfo, setPostsInfo] = useState([]);
@@ -45,7 +45,7 @@ const Search = () => {
 
   const getEntirePostsList = async () => {
     setIsLoading(true);
-    axios.get(`${API_END_POINT}/posts`).then((response) => {
+    axios.get(`/api/posts`).then((response) => {
       const { data } = response;
       setPostsInfo(data);
       setIsLoading(false);
